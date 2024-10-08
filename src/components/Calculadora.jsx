@@ -46,7 +46,7 @@ function VariablesManager() {
         const selectedVars = Object.keys(variables).filter(key => selected[key]);
         const values = selectedVars.map(key => variables[key]);
 
-        fetch('https://back-calculadora-omega.vercel.app/ordenarAsc', {
+        fetch('https://back-calculadora-omega.vercel.app/v1/calculadora/ordenarAsc', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -63,7 +63,7 @@ function VariablesManager() {
         const selectedVars = Object.keys(variables).filter(key => selected[key]);
         const values = selectedVars.map(key => variables[key]);
 
-        fetch('https://back-calculadora-omega.vercel.app/ordenarDesc', {
+        fetch('https://back-calculadora-omega.vercel.app/v1/calculadora/ordenarDesc', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -77,7 +77,7 @@ function VariablesManager() {
 
     // Enviar las variables y la ecuación al backend para calcular la ecuación
     function handleCalculateEquation() {
-        fetch('https://back-calculadora-omega.vercel.app/calcularEcuacion', {
+        fetch('https://back-calculadora-omega.vercel.app/v1/calculadora/calcularEcuacion', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
